@@ -1,0 +1,86 @@
+2025-01-03 20:50:58,361 - snapper_ml.loggings - INFO - ======== Starting job SVM in examples/scripts/train_svm.py =========
+2025-01-03 20:50:58,362 - snapper_ml.loggings - INFO - Job Config -> {'name': 'SVM', 'root_path': '', 'kind': <JobTypes.GROUP: 'group'>, 'run': [{'command': 'examples/scripts/train_svm.py', 'template': False}], 'data': {'folder': 'data/', 'files': ['*QGSJet.txt']}, 'docker_config': None, 'params': {}, 'ray_config': {'address': None, 'num_cpus': 4, 'num_gpus': None}, 'sampler': <SamplerEnum.tpe: 'tpe'>, 'pruner': None, 'num_trials': 12, 'resources_per_worker': {'cpu': 1.0, 'gpu': 0.0}, 'timeout_per_trial': None, 'param_space': {'C': loguniform(0.01, 1000.0), 'gamma': choice(['scale', 'auto'])}, 'metric': {'name': 'val_accuracy', 'direction': <OptimizationDirection.MAXIMIZE: 'maximize'>}}
+2025-01-03 20:51:06,839 - snapper_ml.loggings - INFO - mlflow - Experiment already exists. Writing to same URI/artifact store
+2025-01-03 20:51:09,667 - snapper_ml.loggings - ERROR - Command 'Command 'python3 examples/scripts/train_svm.py /tmp/tmp0wxtgc_z.json' returned non-zero exit status 1.' failed with exit code Command 'python3 examples/scripts/train_svm.py /tmp/tmp0wxtgc_z.json' returned non-zero exit status 1.
+2025-01-09 09:46:28,884 - snapper_ml.loggings - INFO - ======== Starting job SVM in /run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/examples/scripts/train_svm.py =========
+2025-01-09 09:46:28,946 - snapper_ml.loggings - INFO - Job Config -> {'name': 'SVM', 'root_path': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper', 'kind': <JobTypes.GROUP: 'group'>, 'run': [{'command': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/examples/scripts/train_svm.py', 'template': False}], 'data': {'folder': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/data/', 'files': ['*QGSJet.txt']}, 'docker_config': None, 'params': {}, 'ray_config': {'address': None, 'num_cpus': 2, 'num_gpus': 1}, 'sampler': <SamplerEnum.tpe: 'tpe'>, 'pruner': None, 'num_trials': 12, 'resources_per_worker': {'cpu': 1.0, 'gpu': 0.5}, 'timeout_per_trial': None, 'param_space': {'C': loguniform(0.01, 1000.0), 'gamma': choice(['scale', 'auto'])}, 'metric': {'name': 'val_accuracy', 'direction': <OptimizationDirection.MAXIMIZE: 'maximize'>}}
+2025-01-09 09:46:55,630 - snapper_ml.loggings - INFO - mlflow - Experiment already exists. Writing to same URI/artifact store
+2025-01-09 09:46:55,642 - snapper_ml.loggings - INFO - folder='/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/data/' files=['*QGSJet.txt']
+2025-01-09 09:47:11,822 - snapper_ml.loggings - INFO - ======== Starting Trial 1 =========
+2025-01-09 09:47:11,822 - snapper_ml.loggings - INFO - ======== Starting Trial 0 =========
+2025-01-09 09:47:23,161 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 5.674320890197084, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:23,161 - snapper_ml.loggings - INFO - ======== Finished Trial 1 =========
+2025-01-09 09:47:23,166 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 27.524384521212497, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:23,166 - snapper_ml.loggings - INFO - ======== Finished Trial 0 =========
+2025-01-09 09:47:23,311 - snapper_ml.loggings - INFO - ======== Starting Trial 2 =========
+2025-01-09 09:47:23,319 - snapper_ml.loggings - INFO - ======== Starting Trial 3 =========
+2025-01-09 09:47:25,470 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 12.431649636659344, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:25,470 - snapper_ml.loggings - INFO - ======== Finished Trial 3 =========
+2025-01-09 09:47:25,501 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.41818515591414634, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:25,569 - snapper_ml.loggings - INFO - ======== Finished Trial 2 =========
+2025-01-09 09:47:25,616 - snapper_ml.loggings - INFO - ======== Starting Trial 4 =========
+2025-01-09 09:47:25,699 - snapper_ml.loggings - INFO - ======== Starting Trial 5 =========
+2025-01-09 09:47:27,670 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 678.3894825335627, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9473684210526315}, 'artifacts': {}}
+2025-01-09 09:47:27,670 - snapper_ml.loggings - INFO - ======== Finished Trial 4 =========
+2025-01-09 09:47:27,785 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.028076598157824047, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.6052631578947368}, 'artifacts': {}}
+2025-01-09 09:47:27,786 - snapper_ml.loggings - INFO - ======== Finished Trial 5 =========
+2025-01-09 09:47:27,855 - snapper_ml.loggings - INFO - ======== Starting Trial 6 =========
+2025-01-09 09:47:27,937 - snapper_ml.loggings - INFO - ======== Starting Trial 7 =========
+2025-01-09 09:47:29,950 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 480.12272549900877, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:29,950 - snapper_ml.loggings - INFO - ======== Finished Trial 6 =========
+2025-01-09 09:47:29,955 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 20.248113573346497, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:29,956 - snapper_ml.loggings - INFO - ======== Finished Trial 7 =========
+2025-01-09 09:47:30,076 - snapper_ml.loggings - INFO - ======== Starting Trial 8 =========
+2025-01-09 09:47:30,079 - snapper_ml.loggings - INFO - ======== Starting Trial 9 =========
+2025-01-09 09:47:32,192 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 858.6525824485082, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9473684210526315}, 'artifacts': {}}
+2025-01-09 09:47:32,192 - snapper_ml.loggings - INFO - ======== Finished Trial 9 =========
+2025-01-09 09:47:32,196 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.16279157020788823, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:32,196 - snapper_ml.loggings - INFO - ======== Finished Trial 8 =========
+2025-01-09 09:47:32,346 - snapper_ml.loggings - INFO - ======== Starting Trial 10 =========
+2025-01-09 09:47:32,349 - snapper_ml.loggings - INFO - ======== Starting Trial 11 =========
+2025-01-09 09:47:34,361 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 70.07350325043558, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:34,362 - snapper_ml.loggings - INFO - ======== Finished Trial 11 =========
+2025-01-09 09:47:34,386 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 89.46408149603789, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 09:47:34,386 - snapper_ml.loggings - INFO - ======== Finished Trial 10 =========
+2025-01-09 09:47:34,453 - snapper_ml.loggings - INFO - Finished job SVM in 0:00:49
+2025-01-09 14:30:45,491 - snapper_ml.loggings - INFO - ======== Starting job SVM in /run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/examples/scripts/train_svm.py =========
+2025-01-09 14:30:45,496 - snapper_ml.loggings - INFO - Job Config -> {'name': 'SVM', 'root_path': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper', 'kind': <JobTypes.GROUP: 'group'>, 'run': [{'command': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/examples/scripts/train_svm.py', 'template': False}], 'data': {'folder': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/data/', 'files': ['*QGSJet.txt']}, 'docker_config': None, 'params': {}, 'ray_config': {'address': None, 'num_cpus': 2, 'num_gpus': 1}, 'sampler': <SamplerEnum.tpe: 'tpe'>, 'pruner': None, 'num_trials': 12, 'resources_per_worker': {'cpu': 1.0, 'gpu': 0.5}, 'timeout_per_trial': None, 'param_space': {'C': loguniform(0.01, 1000.0), 'gamma': choice(['scale', 'auto'])}, 'metric': {'name': 'val_accuracy', 'direction': <OptimizationDirection.MAXIMIZE: 'maximize'>}}
+2025-01-09 14:31:44,700 - snapper_ml.loggings - INFO - mlflow - Experiment already exists. Writing to same URI/artifact store
+2025-01-09 14:31:44,781 - snapper_ml.loggings - INFO - folder='/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper/data/' files=['*QGSJet.txt']
+2025-01-09 14:33:03,163 - snapper_ml.loggings - INFO - ======== Starting Trial 0 =========
+2025-01-09 14:33:03,163 - snapper_ml.loggings - INFO - ======== Starting Trial 1 =========
+2025-01-09 14:33:20,570 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.18360523426429673, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 14:33:20,571 - snapper_ml.loggings - INFO - ======== Finished Trial 0 =========
+2025-01-09 14:33:20,572 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 51.38288952768891, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 14:33:20,573 - snapper_ml.loggings - INFO - ======== Finished Trial 1 =========
+2025-01-09 14:33:20,858 - snapper_ml.loggings - INFO - ======== Starting Trial 2 =========
+2025-01-09 14:33:20,878 - snapper_ml.loggings - INFO - ======== Starting Trial 3 =========
+2025-01-09 14:33:24,265 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.010858736007118243, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.2631578947368421}, 'artifacts': {}}
+2025-01-09 14:33:24,266 - snapper_ml.loggings - INFO - ======== Finished Trial 2 =========
+2025-01-09 14:33:24,314 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 3.581838448404706, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 1.0}, 'artifacts': {}}
+2025-01-09 14:33:24,315 - snapper_ml.loggings - INFO - ======== Finished Trial 3 =========
+2025-01-09 14:33:24,632 - snapper_ml.loggings - INFO - ======== Starting Trial 4 =========
+2025-01-09 14:33:24,677 - snapper_ml.loggings - INFO - ======== Starting Trial 5 =========
+2025-01-09 14:33:27,978 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.029985871214164028, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.6052631578947368}, 'artifacts': {}}
+2025-01-09 14:33:27,979 - snapper_ml.loggings - INFO - ======== Finished Trial 4 =========
+2025-01-09 14:33:28,017 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 1.5410268012716535, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 1.0}, 'artifacts': {}}
+2025-01-09 14:33:28,017 - snapper_ml.loggings - INFO - ======== Finished Trial 5 =========
+2025-01-09 14:33:28,211 - snapper_ml.loggings - INFO - ======== Starting Trial 6 =========
+2025-01-09 14:33:28,252 - snapper_ml.loggings - INFO - ======== Starting Trial 7 =========
+2025-01-09 14:33:31,247 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 29.18606595268695, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 14:33:31,248 - snapper_ml.loggings - INFO - ======== Finished Trial 7 =========
+2025-01-09 14:33:31,256 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.10997418717204632, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 14:33:31,256 - snapper_ml.loggings - INFO - ======== Finished Trial 6 =========
+2025-01-09 14:33:31,505 - snapper_ml.loggings - INFO - ======== Starting Trial 8 =========
+2025-01-09 14:33:31,515 - snapper_ml.loggings - INFO - ======== Starting Trial 9 =========
+2025-01-09 14:33:35,064 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.015880454627469377, 'gamma': 'auto'}, 'metrics': {'val_accuracy': 0.3157894736842105}, 'artifacts': {}}
+2025-01-09 14:33:35,064 - snapper_ml.loggings - INFO - ======== Finished Trial 8 =========
+2025-01-09 14:33:35,067 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 0.2626861923298858, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 14:33:35,067 - snapper_ml.loggings - INFO - ======== Finished Trial 9 =========
+2025-01-09 14:33:35,343 - snapper_ml.loggings - INFO - ======== Starting Trial 10 =========
+2025-01-09 14:33:35,351 - snapper_ml.loggings - INFO - ======== Starting Trial 11 =========
+2025-01-09 14:33:39,265 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 727.526932370413, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9473684210526315}, 'artifacts': {}}
+2025-01-09 14:33:39,265 - snapper_ml.loggings - INFO - ======== Finished Trial 11 =========
+2025-01-09 14:33:39,267 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'C': 408.3064471155161, 'gamma': 'scale'}, 'metrics': {'val_accuracy': 0.9736842105263158}, 'artifacts': {}}
+2025-01-09 14:33:39,268 - snapper_ml.loggings - INFO - ======== Finished Trial 10 =========
+2025-01-09 14:33:39,380 - snapper_ml.loggings - INFO - Finished job SVM in 0:02:14

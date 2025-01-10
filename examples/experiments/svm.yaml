@@ -1,0 +1,33 @@
+# train_svm.yaml
+
+name: "SVM"
+kind: "group"
+num_trials: 12
+sampler: tpe
+root_path: /run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/pruebas_snapper
+
+param_space:
+  C: loguniform(0.01, 1000)
+  gamma: choice(['scale', 'auto'])
+
+metric:
+  name: val_accuracy
+  direction: maximize
+
+ray_config:
+  num_cpus: 4
+
+data:
+  folder: data/
+  files: ["*QGSJet.txt"]
+  
+resources_per_worker:
+  cpu: 1
+  gpu: 0.5
+
+ray_config:
+  num_cpus: 2
+  num_gpus: 1
+
+run:
+  - examples/scripts/train_svm.py

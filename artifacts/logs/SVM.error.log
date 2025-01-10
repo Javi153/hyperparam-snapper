@@ -1,0 +1,1 @@
+2025-01-03 20:51:09,667 - snapper_ml.loggings - ERROR - Command 'Command 'python3 examples/scripts/train_svm.py /tmp/tmp0wxtgc_z.json' returned non-zero exit status 1.' failed with exit code Command 'python3 examples/scripts/train_svm.py /tmp/tmp0wxtgc_z.json' returned non-zero exit status 1.
