@@ -12,7 +12,7 @@ terraform {
 resource "virtualbox_vm" "node" {
   count     = 2
   name      = format("node-%02d", count.index + 1)
-  image     = "./xenial-server-cloudimg-amd64-vagrant.box"
+  image     = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
   cpus      = 1
   memory    = "512 mib"
 
