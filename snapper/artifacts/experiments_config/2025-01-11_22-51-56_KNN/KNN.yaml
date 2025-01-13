@@ -1,0 +1,33 @@
+# train_svm.yaml
+
+name: "KNN"
+kind: "group"
+num_trials: 20
+sampler: tpe
+root_path: /run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/hyperparam-snapper/snapper
+
+param_space:
+  n_neighbors: range(2, 50)
+  weights: choice(['uniform', 'distance'])
+  algorithm: choice(['ball_tree', 'kd_tree', 'brute'])
+  p: range(1, 5)
+
+metric:
+  name: val_accuracy
+  direction: maximize
+
+data:
+  folder: data/
+  files: ["*QGSJet.txt"]
+  
+resources_per_worker:
+  cpu: 1
+  gpu: 0.5
+
+ray_config:
+  num_cpus: 2
+  num_gpus: 1
+  
+
+run:
+  - examples/scripts/train_knn.py

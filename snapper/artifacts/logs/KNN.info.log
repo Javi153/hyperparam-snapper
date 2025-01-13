@@ -1,0 +1,65 @@
+2025-01-11 22:48:53,144 - snapper_ml.loggings - INFO - ======== Starting job KNN in /run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/hyperparam-snapper/snapper/examples/scripts/train_knn.py =========
+2025-01-11 22:48:53,146 - snapper_ml.loggings - INFO - Job Config -> {'name': 'KNN', 'root_path': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/hyperparam-snapper/snapper', 'kind': <JobTypes.GROUP: 'group'>, 'run': [{'command': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/hyperparam-snapper/snapper/examples/scripts/train_knn.py', 'template': False}], 'data': {'folder': '/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/hyperparam-snapper/snapper/data/', 'files': ['*QGSJet.txt']}, 'docker_config': None, 'params': {}, 'ray_config': {'address': None, 'num_cpus': 2, 'num_gpus': 1}, 'sampler': <SamplerEnum.tpe: 'tpe'>, 'pruner': None, 'num_trials': 20, 'resources_per_worker': {'cpu': 1.0, 'gpu': 0.5}, 'timeout_per_trial': None, 'param_space': {'n_neighbors': range(2, 50, 1), 'weights': choice(['uniform', 'distance']), 'algorithm': choice(['ball_tree', 'kd_tree', 'brute']), 'p': range(1, 5, 1)}, 'metric': {'name': 'val_accuracy', 'direction': <OptimizationDirection.MAXIMIZE: 'maximize'>}}
+2025-01-11 22:49:25,063 - snapper_ml.loggings - INFO - mlflow - Experiment already exists. Writing to same URI/artifact store
+2025-01-11 22:49:25,084 - snapper_ml.loggings - INFO - folder='/run/media/javier/1TB/Universidad/Master_UGR/ServidoresWeb/hyperparam-snapper/snapper/data/' files=['*QGSJet.txt']
+2025-01-11 22:49:38,686 - snapper_ml.loggings - INFO - ======== Starting Trial 0 =========
+2025-01-11 22:49:38,688 - snapper_ml.loggings - INFO - ======== Starting Trial 1 =========
+2025-01-11 22:49:55,425 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 6, 'weights': 'distance', 'algorithm': 'kd_tree', 'p': 1}, 'metrics': {'val_accuracy': 0.2988493058499593}, 'artifacts': {}}
+2025-01-11 22:49:55,426 - snapper_ml.loggings - INFO - ======== Finished Trial 1 =========
+2025-01-11 22:49:55,595 - snapper_ml.loggings - INFO - ======== Starting Trial 2 =========
+2025-01-11 22:49:55,881 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 43, 'weights': 'distance', 'algorithm': 'brute', 'p': 4}, 'metrics': {'val_accuracy': 0.42304501154703733}, 'artifacts': {}}
+2025-01-11 22:49:55,881 - snapper_ml.loggings - INFO - ======== Finished Trial 0 =========
+2025-01-11 22:49:56,017 - snapper_ml.loggings - INFO - ======== Starting Trial 3 =========
+2025-01-11 22:49:57,634 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 38, 'weights': 'uniform', 'algorithm': 'kd_tree', 'p': 4}, 'metrics': {'val_accuracy': 0.4047108247062373}, 'artifacts': {}}
+2025-01-11 22:49:57,634 - snapper_ml.loggings - INFO - ======== Finished Trial 2 =========
+2025-01-11 22:49:57,761 - snapper_ml.loggings - INFO - ======== Starting Trial 4 =========
+2025-01-11 22:49:58,029 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 9, 'weights': 'distance', 'algorithm': 'kd_tree', 'p': 2}, 'metrics': {'val_accuracy': 0.40182032529914347}, 'artifacts': {}}
+2025-01-11 22:49:58,029 - snapper_ml.loggings - INFO - ======== Finished Trial 3 =========
+2025-01-11 22:49:58,152 - snapper_ml.loggings - INFO - ======== Starting Trial 5 =========
+2025-01-11 22:50:00,060 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 47, 'weights': 'distance', 'algorithm': 'ball_tree', 'p': 4}, 'metrics': {'val_accuracy': 0.425843532835507}, 'artifacts': {}}
+2025-01-11 22:50:00,061 - snapper_ml.loggings - INFO - ======== Finished Trial 4 =========
+2025-01-11 22:50:00,249 - snapper_ml.loggings - INFO - ======== Starting Trial 6 =========
+2025-01-11 22:50:00,627 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 41, 'weights': 'distance', 'algorithm': 'brute', 'p': 2}, 'metrics': {'val_accuracy': 0.41046685845413033}, 'artifacts': {}}
+2025-01-11 22:50:00,627 - snapper_ml.loggings - INFO - ======== Finished Trial 5 =========
+2025-01-11 22:50:00,752 - snapper_ml.loggings - INFO - ======== Starting Trial 7 =========
+2025-01-11 22:50:02,468 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 44, 'weights': 'distance', 'algorithm': 'ball_tree', 'p': 2}, 'metrics': {'val_accuracy': 0.4192425882522254}, 'artifacts': {}}
+2025-01-11 22:50:02,468 - snapper_ml.loggings - INFO - ======== Finished Trial 6 =========
+2025-01-11 22:50:02,598 - snapper_ml.loggings - INFO - ======== Starting Trial 8 =========
+2025-01-11 22:50:02,768 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 32, 'weights': 'distance', 'algorithm': 'kd_tree', 'p': 2}, 'metrics': {'val_accuracy': 0.4171975647165357}, 'artifacts': {}}
+2025-01-11 22:50:02,769 - snapper_ml.loggings - INFO - ======== Finished Trial 7 =========
+2025-01-11 22:50:02,899 - snapper_ml.loggings - INFO - ======== Starting Trial 9 =========
+2025-01-11 22:50:04,679 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 7, 'weights': 'distance', 'algorithm': 'kd_tree', 'p': 1}, 'metrics': {'val_accuracy': 0.3322336885903695}, 'artifacts': {}}
+2025-01-11 22:50:04,679 - snapper_ml.loggings - INFO - ======== Finished Trial 8 =========
+2025-01-11 22:50:04,803 - snapper_ml.loggings - INFO - ======== Starting Trial 10 =========
+2025-01-11 22:50:04,977 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 42, 'weights': 'distance', 'algorithm': 'kd_tree', 'p': 1}, 'metrics': {'val_accuracy': 0.4077624036851514}, 'artifacts': {}}
+2025-01-11 22:50:04,977 - snapper_ml.loggings - INFO - ======== Finished Trial 9 =========
+2025-01-11 22:50:05,111 - snapper_ml.loggings - INFO - ======== Starting Trial 11 =========
+2025-01-11 22:50:06,952 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 28, 'weights': 'uniform', 'algorithm': 'ball_tree', 'p': 3}, 'metrics': {'val_accuracy': 0.41724860439742706}, 'artifacts': {}}
+2025-01-11 22:50:06,952 - snapper_ml.loggings - INFO - ======== Finished Trial 10 =========
+2025-01-11 22:50:07,084 - snapper_ml.loggings - INFO - ======== Starting Trial 12 =========
+2025-01-11 22:50:07,232 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 43, 'weights': 'uniform', 'algorithm': 'brute', 'p': 4}, 'metrics': {'val_accuracy': 0.4136101037608034}, 'artifacts': {}}
+2025-01-11 22:50:07,232 - snapper_ml.loggings - INFO - ======== Finished Trial 11 =========
+2025-01-11 22:50:07,399 - snapper_ml.loggings - INFO - ======== Starting Trial 13 =========
+2025-01-11 22:50:09,447 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 47, 'weights': 'distance', 'algorithm': 'brute', 'p': 4}, 'metrics': {'val_accuracy': 0.425843532835507}, 'artifacts': {}}
+2025-01-11 22:50:09,447 - snapper_ml.loggings - INFO - ======== Finished Trial 13 =========
+2025-01-11 22:50:09,597 - snapper_ml.loggings - INFO - ======== Starting Trial 14 =========
+2025-01-11 22:50:09,678 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 47, 'weights': 'distance', 'algorithm': 'brute', 'p': 4}, 'metrics': {'val_accuracy': 0.425843532835507}, 'artifacts': {}}
+2025-01-11 22:50:09,678 - snapper_ml.loggings - INFO - ======== Finished Trial 12 =========
+2025-01-11 22:50:09,808 - snapper_ml.loggings - INFO - ======== Starting Trial 15 =========
+2025-01-11 22:50:11,749 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 47, 'weights': 'uniform', 'algorithm': 'ball_tree', 'p': 4}, 'metrics': {'val_accuracy': 0.4167545552820535}, 'artifacts': {}}
+2025-01-11 22:50:11,750 - snapper_ml.loggings - INFO - ======== Finished Trial 14 =========
+2025-01-11 22:50:11,882 - snapper_ml.loggings - INFO - ======== Starting Trial 16 =========
+2025-01-11 22:50:11,905 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 8, 'weights': 'distance', 'algorithm': 'ball_tree', 'p': 3}, 'metrics': {'val_accuracy': 0.3943390792486472}, 'artifacts': {}}
+2025-01-11 22:50:11,905 - snapper_ml.loggings - INFO - ======== Finished Trial 15 =========
+2025-01-11 22:50:12,037 - snapper_ml.loggings - INFO - ======== Starting Trial 17 =========
+2025-01-11 22:50:14,035 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 11, 'weights': 'distance', 'algorithm': 'ball_tree', 'p': 4}, 'metrics': {'val_accuracy': 0.4005116841092007}, 'artifacts': {}}
+2025-01-11 22:50:14,035 - snapper_ml.loggings - INFO - ======== Finished Trial 16 =========
+2025-01-11 22:50:14,135 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 17, 'weights': 'distance', 'algorithm': 'brute', 'p': 4}, 'metrics': {'val_accuracy': 0.4224590557198121}, 'artifacts': {}}
+2025-01-11 22:50:14,136 - snapper_ml.loggings - INFO - ======== Finished Trial 17 =========
+2025-01-11 22:50:14,157 - snapper_ml.loggings - INFO - ======== Starting Trial 18 =========
+2025-01-11 22:50:14,263 - snapper_ml.loggings - INFO - ======== Starting Trial 19 =========
+2025-01-11 22:50:16,258 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 13, 'weights': 'uniform', 'algorithm': 'ball_tree', 'p': 4}, 'metrics': {'val_accuracy': 0.3937874894950053}, 'artifacts': {}}
+2025-01-11 22:50:16,258 - snapper_ml.loggings - INFO - ======== Finished Trial 18 =========
+2025-01-11 22:50:16,390 - snapper_ml.loggings - INFO - - mlflow - Logging experiment results to Mlflow: {'params': {'n_neighbors': 5, 'weights': 'uniform', 'algorithm': 'ball_tree', 'p': 4}, 'metrics': {'val_accuracy': 0.3411451239551906}, 'artifacts': {}}
+2025-01-11 22:50:16,391 - snapper_ml.loggings - INFO - ======== Finished Trial 19 =========
+2025-01-11 22:50:16,533 - snapper_ml.loggings - INFO - Finished job KNN in 0:01:04
