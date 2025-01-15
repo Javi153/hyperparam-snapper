@@ -5,8 +5,8 @@ from fastapi import FastAPI, UploadFile
 app = FastAPI()
 
 @app.get("/")
-def read_root():
-	return {"Hello": "World"}
+async def read_index():
+    return FileResponse('index.html')
 	
 @app.post("/predict")
 def predict(X: UploadFile):

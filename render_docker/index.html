@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Predicción Baseball</title>
+</head>
+
+<body>
+<h1>Predicción Baseball</h1>
+
+<p>Queremos hacer predicciones sobre el sueldo de jugadores de baseball. El dataset baseball se compone de 16 variables de entrada con el siguiente formato:</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-baqh">Variables</th>
+    <th class="tg-baqh">Batting_average</th>
+    <th class="tg-baqh">On-base.percentage</th>
+    <th class="tg-baqh">Runs</th>
+    <th class="tg-baqh">Hits</th>
+    <th class="tg-baqh">Doubles</th>
+    <th class="tg-baqh">Triples</th>
+    <th class="tg-baqh">HomeRuns</th>
+    <th class="tg-baqh">Runs_batted_in</th>
+    <th class="tg-baqh">Walks</th>
+    <th class="tg-baqh">Strike-Outs</th>
+    <th class="tg-baqh">Stolen_bases</th>
+    <th class="tg-baqh">Errors</th>
+    <th class="tg-baqh">Free_agency_eligibility</th>
+    <th class="tg-baqh">Free_agent</th>
+    <th class="tg-baqh">Arbitration_eligibility</th>
+    <th class="tg-baqh">Arbitration</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh">Tipo</td>
+    <td class="tg-baqh">Porcentaje</td>
+    <td class="tg-baqh">Porcentaje</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Entero</td>
+    <td class="tg-baqh">Binario</td>
+    <td class="tg-baqh">Binario</td>
+    <td class="tg-baqh">Binario</td>
+    <td class="tg-baqh">Binario</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Ejemplo</td>
+    <td class="tg-baqh">0.271</td>
+    <td class="tg-baqh">0.328</td>
+    <td class="tg-baqh">74</td>
+    <td class="tg-baqh">161</td>
+    <td class="tg-baqh">22</td>
+    <td class="tg-baqh">6</td>
+    <td class="tg-baqh">12</td>
+    <td class="tg-baqh">58</td>
+    <td class="tg-baqh">49</td>
+    <td class="tg-baqh">133</td>
+    <td class="tg-baqh">23</td>
+    <td class="tg-baqh">17</td>
+    <td class="tg-baqh">1</td>
+    <td class="tg-baqh">1</td>
+    <td class="tg-baqh">0</td>
+    <td class="tg-baqh">0</td>
+  </tr>
+</tbody></table>
+
+<p>Para hacer las predicciones se requiere subir un archivo con formato lista de listas de python. Por ejemplo, dos predicciones podrían ser un archivo con el siguiente contenido: [[0.271, 0.328, 74, 161, 22, 6, 12, 58, 49, 133, 23, 17, 1, 1, 0, 0], [0.264, 0.318, 24, 48, 7, 0, 1, 22, 15, 18, 0, 7, 0, 0, 0, 0]]</p>
+
+<form action= "https://hyperparam-snapper.onrender.com/predict" method="post" enctype="multipart/form-data">
+  <label for="file">Archivo: </label>
+  <input id="file" name="file" type="file" />
+  <button>Predecir</button>
+</form>
+</body>
+</html>
