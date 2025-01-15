@@ -1,6 +1,7 @@
 from prediction import model_prediction
 
 from fastapi import FastAPI, UploadFile
+from fastapi.responses import FileResponse
 
 app = FastAPI()
 
