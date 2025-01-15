@@ -1,7 +1,7 @@
 from prediction import model_prediction
 
 from fastapi import FastAPI, UploadFile
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 
 app = FastAPI()
 
@@ -9,12 +9,14 @@ app = FastAPI()
 async def read_index():
     return FileResponse('index.html')
 	
-@app.post("/predict")
+@app.post("/predict", response_class=HTMLResponse)
 def predict(X: UploadFile):
 	content = eval(X.file.read())
 	result = model_prediction(content)
-	response = "Para los datos obtenidos tenemos los siguientes resultados: \n"
+	response = """<html>
+	<body>Para los datos obtenidos tenemos los siguientes resultados: \n"""
 	for i in range(len(result)):
 		response += "Consulta %i: %s\n" % (i, result[i])
+	response += response + """</body>
+	</html>"""
 	return response
-	
