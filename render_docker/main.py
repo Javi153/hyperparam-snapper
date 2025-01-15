@@ -9,9 +9,9 @@ app = FastAPI()
 async def read_index():
     return FileResponse('index.html')
 	
-@app.post("/predict", response_class=HTMLResponse)
-async def predict(X: UploadFile):
-	content = eval(X.file.read())
+@app.post("/predict")
+async def predict(file: UploadFile):
+	content = eval(file.file.read())
 	result = model_prediction(content)
 	response = """<!DOCTYPE html>
 	<html>
