@@ -15,9 +15,9 @@ async def predict(file: UploadFile):
 	result = model_prediction(content)
 	response = """<!DOCTYPE html>
 	<html>
-	<body>Para los datos obtenidos tenemos los siguientes resultados: \n"""
+	<body><p>Para los datos obtenidos tenemos los siguientes resultados:</p>"""
 	for i in range(len(result)):
-		response += "Consulta %i: %s\n" % (i, result[i])
+		response += "<p>Consulta %i: %s</p>" % (i+1, result[i])
 	response += """</body>
 	</html>"""
 	return response
