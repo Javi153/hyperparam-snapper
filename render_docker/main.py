@@ -10,8 +10,8 @@ async def read_index():
     return FileResponse('index.html')
 	
 @app.post("/predict", response_class=HTMLResponse)
-async def predict(X: str):
-	content = eval(X)
+async def predict(X: UploadFile):
+	content = eval(X.file.read())
 	result = model_prediction(content)
 	response = """<!DOCTYPE html>
 	<html>
@@ -20,4 +20,4 @@ async def predict(X: str):
 		response += "Consulta %i: %s\n" % (i, result[i])
 	response += """</body>
 	</html>"""
-	return response
+	return {"response": response}
