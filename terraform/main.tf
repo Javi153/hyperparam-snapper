@@ -12,14 +12,14 @@ terraform {
 resource "virtualbox_vm" "node" {
   count     = 2
   name      = format("node-%02d", count.index + 1)
-  image     = "prueba.box"
+  image     = "prueba_old.box"
   cpus      = 1
   memory    = "512 mib"
   user_data = file("${path.module}/user_data")
 
   network_adapter {
     type           = "nat"
-    # host_interface = "vboxnet0"
+    host_interface = "vboxnet0"
   }
 }
 
